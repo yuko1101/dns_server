@@ -1,0 +1,17 @@
+[[domains."example.com.".records]]
+rdata = { A = "127.0.0.1" }
+
+[[domains."example.com.".records]]
+rdata = { A = "127.0.0.2" }
+
+[[domains."example.com.".records]]
+rdata = { AAAA = "::1" }
+interface_translation = "wlp1s0"
+
+[[fallbacks]]
+name_servers = [
+  {
+    socket_addr = "1.1.1.1:53",
+    protocol = { type = "udp" }
+  }
+]
